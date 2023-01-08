@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,48 @@
 
 body {
   background-color: hsl(225deg, 100%, 94%);
+  box-sizing: content-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.container header {
+  height: 161px;
+  background-color: hsl(245deg, 75%, 52%);
+}
+@media (max-width: 375px) {
+  .container header {
+    width: 327px;
+  }
+}
+.container .card {
+  width: 327px;
+  border-radius: 10px;
+  background: #fff;
+}
+.container .card main .offer {
+  background-color: hsl(230deg, 75%, 98.4%);
+  padding: 18px 14px 14px;
+  border-radius: 10px;
+}
+.container main,
+.container footer {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+}
+.container main button,
+.container footer button {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container main button:first-of-type,
+.container footer button:first-of-type {
+  margin-bottom: 29px;
+  background-color: hsl(245deg, 75%, 52%);
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

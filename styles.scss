@@ -1,7 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 *{
     margin: 0;
     padding: 0;
 }
 body{
     background-color:  hsl(225, 100%, 94%);
+    box-sizing: content-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.container{
+    header{
+        @media (max-width:375px){
+            width: 327px;
+        }
+        height:161px;
+        background-color: hsl(245, 75%, 52%);
+    }
+    .card{
+        width: 327px;
+        border-radius: 10px;
+        background:#fff;
+        main{
+            .offer{
+                background-color: hsl(230, 75%, 98.4%);
+                padding:18px 14px 14px;
+                border-radius: 10px;
+            }
+        }
+    }
+    main,
+    footer{
+        padding:26px;
+        display: flex;
+        flex-direction: column;
+        button{
+            &:first-of-type{
+                margin-bottom:29px;
+                background-color: hsl(245, 75%, 52%);
+                color:#fff
+            }
+                padding-top:18px;
+                padding-bottom:18px;
+                border: 0;
+                border-radius: 10px;
+                cursor: pointer;
+        }
+    }
 }
