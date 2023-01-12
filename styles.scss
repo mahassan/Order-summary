@@ -80,6 +80,7 @@ body{
         display: flex;
         flex-direction: column;
         button{
+            background-color: #fff;
             &:first-of-type{
                 margin-bottom:29px;
                 background-color: hsl(245, 75%, 52%);

@@ -86,6 +86,7 @@ body {
 }
 .container main button,
 .container footer button {
+  background-color: #fff;
   padding-top: 18px;
   padding-bottom: 18px;
   border: 0;
