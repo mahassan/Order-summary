@@ -5,12 +5,32 @@
 }
 
 body {
-  background-color: hsl(225deg, 100%, 94%);
+  background-color: hsl(225deg, 100%, 98%);
+  background-image: url(./images/pattern-background-desktop.svg) no-repeat;
   box-sizing: content-box;
   font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+}
+@media (max-width: 375px) {
+  body {
+    background-image: url(./images/icon-music.svg) no-repeat;
+  }
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap; /* By default flex has nowrap which prevent align-content*/
+}
+.container img {
+  width: 327px;
+  border-radius: inherit;
+}
 .container header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   height: 161px;
   background-color: hsl(245deg, 75%, 52%);
 }
@@ -24,14 +44,44 @@ body {
   border-radius: 10px;
   background: #fff;
 }
+.container .card main .summary {
+  color: hsl(224deg, 23%, 55%);
+  margin-bottom: 32px;
+  line-height: 26px;
+}
 .container .card main .offer {
   background-color: hsl(230deg, 75%, 98.4%);
   padding: 18px 14px 14px;
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .card main .offer h1, .container .card main .offer h2 {
+  font-size: inherit;
+}
+.container .card main .offer h1 {
+  color: hsl(223deg, 47%, 23%);
+}
+.container .card main .offer h2 {
+  color: hsl(224deg, 23%, 55%);
+  font-weight: 500;
+}
+.container .card main .offer .icon {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+}
+.container .card main .offer .icon img {
+  width: inherit;
+  height: inherit;
+}
+.container .card main .offer .anchor {
+  display: flex;
+  align-items: center;
 }
 .container main,
 .container footer {
-  padding: 26px;
+  padding: 26px 26px 0 26px;
   display: flex;
   flex-direction: column;
 }
@@ -48,6 +98,12 @@ body {
   margin-bottom: 29px;
   background-color: hsl(245deg, 75%, 52%);
   color: #fff;
+  box-shadow: 0 14px 10px hsl(225deg, 100%, 94%);
+  transition: background-color 1s;
+}
+.container main button:first-of-type:hover,
+.container footer button:first-of-type:hover {
+  background-color: hsl(224deg, 23%, 55%);
 }
 
 /*# sourceMappingURL=styles.css.map */

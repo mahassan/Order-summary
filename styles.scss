@@ -4,12 +4,29 @@
     padding: 0;
 }
 body{
-    background-color:  hsl(225, 100%, 94%);
+    background-color:   hsl(225, 100%, 98%);
+    background-image: url(./images/pattern-background-desktop.svg) no-repeat;
     box-sizing: content-box;
     font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    @media (max-width:375px){
+        background-image: url(./images/icon-music.svg) no-repeat;
+    }
+
 }
 .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap; /* By default flex has nowrap which prevent align-content*/
+    img{
+        width:327px;
+        border-radius: inherit;
+    }
     header{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         @media (max-width:375px){
             width: 327px;
         }
@@ -21,23 +38,58 @@ body{
         border-radius: 10px;
         background:#fff;
         main{
+            .summary{
+                color: hsl(224, 23%, 55%);
+                margin-bottom: 32px;
+                line-height: 26px;
+            }
             .offer{
                 background-color: hsl(230, 75%, 98.4%);
                 padding:18px 14px 14px;
                 border-radius: 10px;
+                display: flex;
+                justify-content: space-between;
+                h1,h2{
+                    font-size: inherit;    
+                }
+                h1{
+                    color: hsl(223, 47%, 23%);
+                }
+                h2{
+                    color: hsl(224, 23%, 55%);
+                    font-weight: 500;
+                }
+                .icon{
+                    width: 50px;
+                    height: 50px;
+                    background: transparent;
+                    img{
+                        width: inherit;
+                        height: inherit;
+                    }
+                }
+                .anchor {
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
     }
     main,
     footer{
-        padding:26px;
+        padding:26px 26px 0 26px;
         display: flex;
         flex-direction: column;
         button{
             &:first-of-type{
                 margin-bottom:29px;
                 background-color: hsl(245, 75%, 52%);
-                color:#fff
+                color:#fff;
+                box-shadow: 0 14px 10px hsl(225deg 100% 94%);
+                transition: background-color 1s;
+            &:hover{
+                background-color: hsl(224, 23%, 55%);
+            }
             }
                 padding-top:18px;
                 padding-bottom:18px;
