@@ -9,6 +9,12 @@ body {
   box-sizing: content-box;
   font-family: "Red Hat Display", sans-serif;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap; /* By default flex has nowrap which prevent align-content*/
+  min-height: 100vh;
 }
 @media (max-width: 375px) {
   body {
@@ -16,13 +22,6 @@ body {
   }
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap; /* By default flex has nowrap which prevent align-content*/
-}
 .container img {
   width: 327px;
   border-radius: inherit;
