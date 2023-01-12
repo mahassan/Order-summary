@@ -46,6 +46,12 @@ body {
   color: hsl(224deg, 23%, 55%);
   margin-bottom: 32px;
   line-height: 26px;
+  text-align: center;
+}
+.container .card main .summary h1 {
+  color: hsl(223deg, 47%, 23%);
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 .container .card main .offer {
   background-color: hsl(230deg, 75%, 98.4%);

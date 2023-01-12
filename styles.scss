@@ -43,6 +43,12 @@ body{
                 color: hsl(224, 23%, 55%);
                 margin-bottom: 32px;
                 line-height: 26px;
+                text-align: center;
+                h1{
+                    color: hsl(223, 47%, 23%);
+                    margin-bottom:10px;
+                    font-weight: 700;
+                }
             }
             .offer{
                 background-color: hsl(230, 75%, 98.4%);
